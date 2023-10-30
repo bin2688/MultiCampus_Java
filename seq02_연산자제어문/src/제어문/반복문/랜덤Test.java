@@ -12,6 +12,7 @@ public class 랜덤Test {
 		//int target = r.nextInt(100); //0 ~ 99
 		int target = r.nextInt(99) + 1; //1 ~ 99
 		System.out.println(target);
+		
 	}
 
 }
