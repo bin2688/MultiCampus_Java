@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	body {
+		background: pink;
+	}
+	
+ 	*{
+  		font-size: 20px;
+ 	}
+ 	input{
+ 		background: greenyellow;
+ 	}
+ 	
+	
+</style>
+</head>
+<body>
+<h3>게시판정보검색(한개)화면입니다.</h3>
+<hr color='red'>
+<a href="index.html">첫페이지로 이동</a>
+<a href="bbs.html">게시판정보페이지로 이동</a>
+<form action="one2.jsp">
+<table border="1">
+	<tr>
+		<td>번호:</td>
+		<td>
+		 <input name ="no">
+		</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"> 
+		<button type="submit">회원정보검색(한개)요청</button>
+		<!--컨트롤 + 쉬프트 + / : 주석 단축키  -->
+		<!--form안에 들어있는 버튼은 전송용 버튼  --> 
+		<!-- <button type="submit">은 생략할 수 있음  -->
+		<!-- <input type="submit" value="회원가입요청"> input은 닫는 태그가없어서 이렇게 써야함  -->
+		</td>
+	</tr>
+</table>
+</form>
+
+</body>
+</html>
