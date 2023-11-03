@@ -1,0 +1,66 @@
+@charset "UTF-8";
+*{
+	text-align: center;
+	vertical-align: middle;
+	
+}
+
+a{
+	text-decoration: none; /* 밑줄없애기  */
+	
+}
+
+li {
+	list-style: none; /* 옆에 점없애기 */
+	float: left; /*왼쪽을 기준으로 둥둥떠다님*/
+	padding: 15px; /* 간격*/
+}
+
+li:first-child{ /*첫번째 li*/
+	border-radius: 50px 50px 50px 50px; /* 1~4번까지 시계방향 넘버링 */
+	background: orange;
+}
+li:last-child{	/*마지막 li*/
+	border-radius: 50px 50px 50px 50px;
+	background: white;
+}
+li:nth-child(2){ /* 짝수는 2n, 홀수는 2n+1 */
+	background: pink;
+	border-radius: 50px 50px 50px 50px;	
+}
+li:nth-child(3){ 
+	background: yellow;
+	border-radius: 50px 50px 50px 50px;
+}
+#total {
+	width: 800px;
+	height: 800px;
+	color: blue;
+	font: 25px; 궁서 bold;
+	background-image:  url("../img/back.png");
+}
+
+#top{
+	width: 800px;
+	height: 70px;
+	background: lime;
+	
+}
+
+#top2{
+	width: 250px;
+	height: 300px;
+	background: black;
+	color: yellow;
+	position: fixed;
+	top: 5px;
+	right: 5px;
+	border-radius: 500px 0 0 500px;
+}
+
+#center{
+	width: 800px;
+	height: 700px;
+	text-align: center;
+	
+}

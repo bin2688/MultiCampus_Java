@@ -13,7 +13,7 @@ public class TV2 {
 	// public TV2 () {
 	//}
 	
-	//생성자는 문조건 void라서 쓰지않음
+	//생성자는 무조건 void라서 쓰지않음
 	//클래스이름과 동일해야 객체생성시 자동호출
 	//생성자메서드(생성자), constructor
 	//public TV2(int c, boolean o, int v) {
