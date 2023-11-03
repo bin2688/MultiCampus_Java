@@ -45,7 +45,7 @@
 				data : {
 					id : '<%= bag2.getId() %>',
 					title : '<%= bag2.getTitle() %>',
-					price : '%= bag2.getPrice() %>'
+					price : '<%= bag2.getPrice() %>'
 				},
 				success : function(x) {
 					alert('장바구니에 추가 되었습니다')
@@ -57,11 +57,6 @@
 			})
 		})
  })
-
-
-
-
-
 </script>
 </head>
 <body>
