@@ -1,5 +1,7 @@
 package 형변환개념;
 
+import org.omg.CORBA.PUBLIC_MEMBER;
+
 public class 기본형형변환 {
 
 	public static void main(String[] args) {
@@ -20,7 +22,6 @@ public class 기본형형변환 {
 		byte b = (byte)a; //-128~127
 		System.out.println(b);
 		//강제형변환을 할 때는 작은 공간에 들어갈 수 있는 값만 가능하다. 
-
 	}
 
 }
