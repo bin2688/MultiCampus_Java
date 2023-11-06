@@ -71,8 +71,8 @@ $(function() {
 </script>
 </head>
 <body>
-<button id="b1">car.json읽어와서 추출하기</button>
-<button id="b2">car.xml읽어와서 추출하기</button>
+<button id="b1">위치로 날씨알아오기</button>
+<button id="b2">지역으로 날씨알아오기</button>
 <hr>
 <div id="d1" style="background: pink"></div>
 </body>
