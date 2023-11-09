@@ -8,6 +8,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class BbsController {
 	
 	//버튼을 눌러서 요청 --> 함수 하나
+	@RequestMapping("one")
+	public void one(BbsDTO2 dto, Model model) throws Exception {
+		System.out.println(dto);
+		
+		BbsDAO dao = new BbsDAO();
+		BbsDTO2 bag = dao.one(dto);
+		//검색결과는 bag에 들어있음
+		//bag를 one.jsp까지 전달해주어야 한다. ==> Model
+		model.addAttribute("bag", bag); // object(큰) <-- BbsDTO2
+		//자동타입변환(자동형변환, Casting, 업캐스팅)
+		
+	}
+	@RequestMapping("list")
+	public void list() {
+		
+	}
+	
 	@RequestMapping("insert2")  //다른곳에서 인식시키기위함
 	public void insert2(BbsDTO2 bag, Model model) {
 		System.out.println(bag);

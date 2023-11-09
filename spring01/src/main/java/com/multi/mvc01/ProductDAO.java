@@ -9,6 +9,75 @@ import java.util.ArrayList;
 
 public class ProductDAO {
 	// 물건 리스트 전체 보기
+	
+	public int update(ProductDTO dto) {
+		int result = 0;
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			// 특정한 위치에 있는 드라이버 파일을 램에 읽어들여 설정
+			System.out.println("1. 드라이버 설정 성공.@@@@");
+
+			// 2. db연결 mySQL: school, oracle: xe
+			String url = "jdbc:mysql://localhost:3306/shop5?useUnicode=true&serverTimezone=Asia/Seoul";
+			String user = "root";
+			String password = "1234";
+			Connection con = DriverManager.getConnection(url, user, password); // Connection
+			System.out.println("2. db연결 성공.@@@@@@");
+
+			// 3.SQL문 결정/생성
+			String sql = "update product set title = ? where id = ?";
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, dto.getTitle());
+			ps.setString(2, dto.getId());
+			System.out.println("3.ok----------");
+
+			// 4.DB로 SQL문 전송
+			result = ps.executeUpdate(); // 1
+			System.out.println("4.ok----------");
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("에러가 발생함.");
+		}
+		return result; // 1, 0
+	}
+	
+	public int insert(ProductDTO dto) {
+		int result = 0;
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			// 특정한 위치에 있는 드라이버 파일을 램에 읽어들여 설정
+			System.out.println("1. 드라이버 설정 성공.@@@@");
+
+			// 2. db연결 mySQL: school, oracle: xe
+			String url = "jdbc:mysql://localhost:3306/shop5?useUnicode=true&serverTimezone=Asia/Seoul";
+			String user = "root";
+			String password = "1234";
+			Connection con = DriverManager.getConnection(url, user, password); // Connection
+			System.out.println("2. db연결 성공.@@@@@@");
+
+		// 3.SQL문 결정/생성
+		String sql = "insert into product values (?,?,?,?,?,?)";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setString(1, dto.getId());
+		ps.setString(2, dto.getTitle());
+		ps.setString(3, dto.getContent());
+		ps.setInt(4, Integer.parseInt(dto.getPrice()));
+		ps.setString(5, dto.getCompany());
+		ps.setString(6, dto.getImg());
+		System.out.println("3.ok----------");
+
+		// 4.DB로 SQL문 전송
+		result = ps.executeUpdate(); //1
+		System.out.println("4.ok----------");
+		}catch(Exception e) {
+			e.printStackTrace();
+			System.out.println("에러가 발생함.");
+		}
+		return result; //1, 0
+	}
+
+	
+	
 	public ArrayList<ProductDTO> list() throws Exception {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		// 특정한 위치에 있는 드라이버 파일을 램에 읽어들여 설정
