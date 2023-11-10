@@ -1,5 +1,7 @@
 package com.multi.mvc01;
 
+import java.util.ArrayList;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,4 +33,17 @@ public class ProductController {
 		int result = dao.update(bag);
 	}
 	
+	@RequestMapping("list2")
+	public void list2(Model model) throws Exception {
+		ProductDAO dao = new ProductDAO();
+		ArrayList<ProductDTO> list = dao.list();
+		model.addAttribute("list", list);
+	}
+	
+	@RequestMapping("one2")
+	public void one2(ProductDTO dto, Model model) throws Exception {
+		ProductDAO dao = new ProductDAO();
+		ProductDTO one = dao.one(dto);
+		model.addAttribute("one", one);
+	}
 }

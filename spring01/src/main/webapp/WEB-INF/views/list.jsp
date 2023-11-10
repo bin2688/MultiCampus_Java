@@ -18,8 +18,7 @@
 %>
 
 게시판 id <%=bag.getId() %> <br>
-게시판 title <%=bag.getTitle() %> <br>
-게시판 content <%=bag.getContent()%> <br>
+	<a href="one?id=<%=bag.getId()%>">게시판 title <%=bag.getTitle() %> </a> <br>
 게시판 writer <%=bag.getWriter()%> <br>
 <hr color="red">
 <% } %>
