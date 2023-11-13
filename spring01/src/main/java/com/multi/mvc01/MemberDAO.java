@@ -24,8 +24,8 @@ public class MemberDAO {
 	}
 
 	// 로그인처리
-	public boolean login(MemberDTO dto) throws Exception {
-		boolean result = my.selectOne("member.login", dto);
+	public int login(MemberDTO dto) throws Exception {
+		int result = my.selectOne("member.login", dto);
 		return result;
 	}
 }

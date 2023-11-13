@@ -132,6 +132,7 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+        <!-- spring jdbc기능 확장 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
@@ -139,6 +140,7 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
+        <!-- mybatis + spring  -->
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
