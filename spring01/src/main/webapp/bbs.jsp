@@ -1,5 +1,5 @@
+<%@page import="java.util.List"%>
 <%@page import="com.multi.mvc01.BbsDTO2"%>
-<%@page import="java.util.ArrayList"%>
 <%@page import="com.multi.mvc01.BbsDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -38,7 +38,7 @@
 		<% } %>
 		<%
 			BbsDAO dao = new BbsDAO();
-			ArrayList<BbsDTO2> list = dao.list();
+			List<BbsDTO2> list = dao.list();
 		%>
 		전체게시물: <%= list.size() %>개 
 		<br><br>

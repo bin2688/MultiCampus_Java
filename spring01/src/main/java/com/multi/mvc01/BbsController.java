@@ -1,6 +1,6 @@
 package com.multi.mvc01;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,7 +28,7 @@ public class BbsController {
 	@RequestMapping("list")
 	public void list(Model model) throws Exception {
 		//dao를 이용해서 여러개를 받아서 가지고 와주세요.
-		ArrayList<BbsDTO2> list = dao.list();
+		List<BbsDTO2> list = dao.list();
 		System.out.println(list.size());
 		model.addAttribute("list", list);
 	}
