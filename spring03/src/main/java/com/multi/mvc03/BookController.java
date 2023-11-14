@@ -15,16 +15,14 @@ public class BookController {
 	BookDAO dao;
 	
 		@RequestMapping("one")
-		public void one(BookDTO dto, Model model) throws Exception {
-			System.out.println(dto);			
-			BookDTO bag = dao.one(dto);		
-			model.addAttribute("bag", bag);
+		public void one(String id, Model model) throws Exception {		
+			BookDTO dto = dao.one(id);		
+			model.addAttribute("dto", dto);
 			
 		}
 		@RequestMapping("list")
 		public void list(Model model) throws Exception {
 			List<BookDTO> list = dao.list();
-			System.out.println(list.size());
 			model.addAttribute("list", list);
 		}
 		
@@ -40,12 +38,11 @@ public class BookController {
 		}
 		@RequestMapping("update")
 		public String update(BookDTO dto) {
-		 	int result = dao.update(dto);
-		 	
+		 	int result = dao.update(dto);		 	
 		 	if (result == 1) {
-				return "redirect:book.jsp"; 
+		 		return "update"; 
 			}else {
-				return "no"; 
+				return "redirect:index.jsp"; 
 			}
 		 	
 		}

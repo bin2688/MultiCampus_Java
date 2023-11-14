@@ -9,13 +9,13 @@
 <body>
 <img src="resources/img/kakao.jpg" width="500" height="300">
 <h3>북마크정보검색</h3>
-<form action="one2">
+<form action="one">
 	아이디: <input type="text" name="id"><br>
 	<button type="submit">서버로 전송</button>
 </form>
 <hr>
 <h3>북마크 전체검색</h3>
-<a herf="list"> 
+<a href="list"> 
 	<button>전체검색 요청</button>
 </a>
 <hr>
@@ -32,6 +32,11 @@
 <form action="update">
 	아이디: <input type="text" name="id"> <br>
 	이름: <input type="text" name="name"> <br>
+	<button type="submit">서버로 전송</button>
+</form>
+<h3>북마크 삭제</h3>
+<form action="delete">
+	삭제할 아이디: <input type="text" name="id"> <br>
 	<button type="submit">서버로 전송</button>
 </form>
 </body>

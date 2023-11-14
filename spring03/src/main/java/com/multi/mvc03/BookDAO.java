@@ -22,19 +22,18 @@ public class BookDAO {
 			return result;
 		}
 		
-		public int delete(BookDTO dto) {
-			int result = my.update("book.delete",dto);
-			return result;
-		}
 		
 		public List<BookDTO> list() {
 			List<BookDTO> list = my.selectList("book.list");
 			return list;
 		}
 		
-		public BookDTO one(BookDTO dto) {
-			BookDTO bag2 = my.selectOne("book.one", dto);
-			return bag2;
+		public BookDTO one(String id) {
+			return my.selectOne("book.one", id);
 		}
 		
+		public int delete(BookDTO dto) {
+			int result = my.update("book.delete",dto);
+			return result;
+		}
 }

@@ -15,7 +15,9 @@
 		delete from book where id = #{id}
 	</delete>
 	
-	<select id="one" parameterType="bookVO" resultType="bookVO">
+	<!-- insert, delete, update는 resultType="int"라서 반드시! 생략함.! -->
+	<!-- select는 어떤 dto에 넣는지를 모르기때문에 resultType="bookVO"를 반드시! 지정해주어야 한다.  -->
+	<select id="one" parameterType="String" resultType="bookVO">
 		select * from book where id = #{id}
 	</select>
 	

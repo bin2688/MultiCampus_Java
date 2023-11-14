@@ -42,14 +42,12 @@ public class BookController {
 		}
 		@RequestMapping("update")
 		public String update(BookDTO dto) {
-		 	int result = dao.update(dto);
-		 	
+		 	int result = dao.update(dto);	 	
 		 	if (result == 1) {
 				return "redirect:book.jsp"; 
 			}else {
 				return "no"; 
-			}
-		 	
+			}		 	
 		}
 		@RequestMapping("delete")
 		public void delete(BookDTO dto, Model model) {
