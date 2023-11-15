@@ -6,25 +6,19 @@
     	<!--   total도 똑같이 만들어줌 -->
 <table border="1">
     <thead>
-        <tr>
-            <th>항목명</th>
-            <th>값</th>
+        <tr style="background: yellow">
+            <th>영화제목</th>
+            <th>영화가격</th>
         </tr>
     </thead>
     <tbody>
         <tr style="background: lime">
         <%-- ${출력하고속성명} : 세션, 모델만 출력 가능 --%>
-            <td>${vo.com}</td> <!-- == vo.getCom() -->
-            <td>${vo.price}</td>
+            <td>${vo.sub}</td> <!-- == vo.getCom() -->
+            <td>${vo.price}원</td>
         </tr>
-        <%-- 모델속성값 꺼내서 프린트 ${속성명} --%>
-        <tr style="background: pink">
-            <td>${vo.mouse}</td>
-            <td>${vo.price2}</td>
-        </tr>
-        <tr style="background: yellow">
-            <td>총합</td>
-            <td>${total}</td>
+        <tr>
+            <td colspan="2"><a href="">문자 인증 받기</a></td>
         </tr>
     </tbody>
 </table>

@@ -5,13 +5,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class ComputerController {
+public class MovieController {
 	
-	@RequestMapping("computer")
-	public void computer(ComputerVO vo, Model model) {
-		System.out.println(vo);
-		int total = vo.getPrice() + vo.getPrice2();
+	@RequestMapping("movie")
+	public void computer(MovieVO vo, Model model) {
+		System.out.println(vo);	
 		model.addAttribute("vo", vo);
-		model.addAttribute("total", total);
 	}
 }

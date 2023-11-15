@@ -13,11 +13,12 @@
 	//$() == document.ready()
 	$(function() {
 		$('#b1').click(function() {
+			//$('#result') empty 초기화하면 이전꺼는 지워짐
 			$.ajax({ //json				
 				url: "test",
 				success: function(x) { //브라우저가 http통신 결과를 받아온다. - 파라메터값넣기
 					alert("ajax통신결과 >>" + x)
-					$('#result').html(x)
+					$('#result').append(x + "<br>") //append()는 안사라지고 계속 이어서 출력 ex)댓글
 				} //success	
 			}) //ajax
 		}) //b1
