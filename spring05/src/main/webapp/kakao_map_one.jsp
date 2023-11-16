@@ -11,7 +11,7 @@
 	<div id="map" style="width: 100%; height: 350px;"></div>
 	<script type="text/javascript" src="resources/js/jquery-3.7.1.js"></script>
 	<script type="text/javascript"
-		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b1337c39ae11af9ddc22bfcd541bde43"></script>
+		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=앱키"></script>
 	<script>
 $(function() {
 	//1.jsp가 시작하자마자 ajax를 실행해서 json을 받아와서 map을 찍을까?
