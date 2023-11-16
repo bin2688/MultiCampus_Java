@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller //싱글톤 객체 생성 + 컨트롤러로 역할을 하는 클래스로도 설정
 public class BbsController {
@@ -34,6 +35,13 @@ public class BbsController {
 		List<BbsDTO2> list = dao.list();
 		System.out.println(list.size());
 		model.addAttribute("list", list);
+	}
+	
+	@RequestMapping("jsonbbs")
+	@ResponseBody
+	public List<BbsDTO2> jsonbbs() throws Exception {
+		List<BbsDTO2> list = dao.list();
+		return list;
 	}
 	
 	@RequestMapping("insert")  //다른곳에서 인식시키기위함
