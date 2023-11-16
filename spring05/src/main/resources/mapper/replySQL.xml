@@ -3,7 +3,10 @@
 <mapper namespace="reply">
 <!--ORM. Mapper파일!  -->
 
-	<insert id="create" parameterType="replyVO">
+	<insert id="create" 
+			parameterType="replyVO" 
+			useGeneratedKeys="true" 
+			keyProperty="id">
 		insert into reply values (null,#{oriid},#{content},#{writer})
 	</insert>
 

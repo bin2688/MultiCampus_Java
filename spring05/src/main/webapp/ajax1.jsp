@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 <script type="text/javascript" src="resources/js/jquery-3.7.1.js"></script>
 <script type="text/javascript">
-	$(function()) {
+	$(function() {
 
 	}) //$
 </script>
