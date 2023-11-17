@@ -1,13 +1,21 @@
 package com.multi.mvc05;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class RestController {
+	
+	@Autowired
+	MapDAO mapDAO;
+	
+	@Autowired
+	ChartDAO chartDAO;
 	
 	@RequestMapping("string")
 	@ResponseBody //controller에서 data를 리턴할 때! ==> views를 만들필요가 없음.
@@ -48,5 +56,26 @@ public class RestController {
 		map.setLat(37.5072856);
 		map.setLon(126.7117297);
 		return map;
+	}
+	
+	@RequestMapping("map2")
+	@ResponseBody
+	public MapVO one(String location) {
+		return mapDAO.one(location);
+
+	}
+	
+	@RequestMapping("map3")
+	@ResponseBody
+	public List<MapVO> all() {
+		return mapDAO.all();
+
+	}
+	
+	@RequestMapping("chart1")
+	@ResponseBody
+	public List<ChartDTO> chart() {
+		return chartDAO.all();
+
 	}
 }

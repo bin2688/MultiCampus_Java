@@ -2,9 +2,16 @@ package com.multi.mvc05;
 
 public class MapVO {
 	
+	private String location;
 	private double lat;
 	private double lon;
 	
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
 	public double getLat() {
 		return lat;
 	}
@@ -20,8 +27,10 @@ public class MapVO {
 	
 	@Override
 	public String toString() {
-		return "mapVO [lat=" + lat + ", lon=" + lon + "]";
+		return "MapVO [location=" + location + ", lat=" + lat + ", lon=" + lon + "]";
 	}
+	
+	
 	
 	
 }
