@@ -35,6 +35,7 @@
 									latlng: new kakao.maps.LatLng(json.lat, json.lon)
 								})
 							})	
+							
 							// 마커를 표시할 위치와 title 객체 배열입니다 
 							/* var positions = [
 									{
