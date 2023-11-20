@@ -58,6 +58,30 @@ public class 스트링확인문제 {
 		Print.arrayPrint(newArr);
 		Arrays.sort(newArr); // 오름차순정렬, 파괴형
 		Print.arrayPrint(newArr);
+		System.out.println("------7번문제끝------");
+		
+		
+		String s10 = "정길동";
+		String s20 = "정길동";
+		System.out.println(s10 == s20); //참조형은 주소 비교
+		s10 = "홍길동";
+		System.out.println(s10 == s20);
+		//참조형에서 주소가 가리키는 값들이 동일한지 비교 
+		//함수를 이용해야함.
+		System.out.println(s10.equals(s20));
+		
+		s10 = "김길동";
+		s10 = "박길동";
+		//String이 변경될때는 새로운 메모리에 새로운 변경된 데이터를 넣는다.! 비효율적
+		StringBuilder sb = new StringBuilder();
+		sb.append("홍길동");
+		System.out.println(sb);
+		sb.insert(0, "하하하");
+		System.out.println(sb);
+		String s30 = "푸하하굿바이";
+		char[] c2 =s30.toCharArray(); //String을 char배열로 만들때
+		Print.arrayPrint(c2);
+		//Sting --> String[], char[], char, String추출
 	}
 
 }
