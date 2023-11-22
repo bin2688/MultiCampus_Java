@@ -22,4 +22,7 @@ public class Print {
 	public static void arrayPrint(boolean[] arr) {
 		System.out.println(Arrays.toString(arr));
 	}
+	public static void arrayPrint(Object[] arr) {
+		System.out.println(Arrays.toString(arr));
+	}
 }
