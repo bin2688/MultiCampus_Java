@@ -23,8 +23,7 @@ class Solution2 {
 		int[] answer = new int[num2 - num1 + 1];
 		int index = 0;
 		for (int i = num1; i < num2 +1 ; i++) {
-			answer[index] = numbers[i];
-			index++;
+			answer[index++] = numbers[i];
 		}
     	return answer;
 	}
