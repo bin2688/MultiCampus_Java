@@ -16,7 +16,6 @@ public class 같은숫자는싫어 {
 
 class Solution3 {
 	public int[] solution(int[] num_list) {
-		int[] answer = null;
 		//1. 중복 직접제거
 		ArrayList<Integer> list = new ArrayList<Integer>();
 		list.add(num_list[0]);
@@ -28,6 +27,11 @@ class Solution3 {
 			}
 		}
 		System.out.println(list);
+		
+		int[] answer = new int[list.size()];
+		for (int i = 0; i < answer.length; i++) {
+			answer[i] = list.get(i);
+		}
 		//2. 중복 제거해줌(but 아예 똑같은 수 한개만 허용)
 //		HashSet<Integer> set = new HashSet<Integer>();
 //		for (int i = 0; i < num_list.length; i++) {
