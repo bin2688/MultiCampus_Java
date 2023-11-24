@@ -9,7 +9,7 @@ public class 배열을컬렉션으로 {
 
 	public static void main(String[] args) {
 		String[] s2 = {"aaa","bbb","bbb","ccc"};
-		List<String> list = Arrays.asList(s2); //but 읽기전용 (추가등은 불가)
+		List<String> list = Arrays.asList(s2); //but 읽기전용 (추가 삭제 불가, 값변경은가능)
 		System.out.println(list); 
 		
 		int index = list.indexOf("bbb"); ///bbb값의 위치
