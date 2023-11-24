@@ -1,7 +1,7 @@
 package 문자열관련;
 
 import java.util.Arrays;
-import java.util.Collections;
+
 
 public class 문자열내림차순 {
 
@@ -21,9 +21,7 @@ class Solution4 {
 	//char[] --> String
 	String x = new String(c);
 	//String s2 = c.toString(); 대괄호때문에 안됨
-	String answer = new StringBuilder(x)
-			.reverse()
-			.toString();
+	String answer = new StringBuilder(x).reverse().toString();
 	return answer;
 	}
 }
