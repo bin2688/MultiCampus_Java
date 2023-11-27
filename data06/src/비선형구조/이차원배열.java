@@ -9,20 +9,22 @@ public class 이차원배열 {
 		//{ {0,0,0}, {0,0,0}, {0,0,0} } ==> 2차원배열(배열 안에 배열)
 		
 		int[] row1 = {2,5,3}; // 3열
-		int[] row2 = {1,1}; // 2열
+		int[] row2 = {1,2}; // 2열
 		int[] row3 = {5,4,3,2,1}; //5열
 		num[0] = row1;
 		num[1] = row2;
-		num[1] = row3;
+		num[2] = row3;
 		//num[행] = row(열)
 		for (int i = 0; i < num.length; i++) { //3줄
 			//2차원 배열의 각 행의 열개수를 따로 세주어야한다.
 			for (int j = 0; j < num[i].length; j++) {
-				
+				System.out.print(num[i][j]);
 			}
-			
+			System.out.println();
 		}
-	
+		System.out.println(num[0][num[0].length - 1]);
+		System.out.println(num[1][num[1].length - 1]);
+		System.out.println(num[2][2]);
 		
 
 		
