@@ -31,7 +31,7 @@ public class Stack확인 {
 		stack.push(3);
 		System.out.println(stack.empty()?1:0);
 		System.out.println(stack.peek());
-		
+
 	}
 
 }
