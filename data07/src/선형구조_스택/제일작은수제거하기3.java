@@ -16,8 +16,8 @@ public class 제일작은수제거하기3 {
 		}
 		System.out.println(stack);
 		int[] answer = new int[n.length - 1];
-		for (int i = answer.length-1; i >= 0; i--) { //역순으로 꺼내기
-			answer[i] = stack.pop();
+		for (int i = answer.length-1; i >= 0; i--) { 
+			answer[i] = stack.pop(); //pop은 뒤에서부터꺼냄
 		}
 		System.out.println(Arrays.toString(answer));
 	}
