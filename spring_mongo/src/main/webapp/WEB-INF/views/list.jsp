@@ -9,11 +9,13 @@
 	<td>날씨</td>
 	<td>날짜</td>
 </tr>
-<c:forEach items="${list}" var="vo">
+<c:forEach items="${list}" var="vo" varStatus="status">
 <tr>
-	<td>${vo._id}</td>
+	<td>${status.count}</td> <!--옵션으로 번호부여-->
 	<td>${vo.name}</td>
-	<td>${vo.content}</td>
+	<td>
+	<a href="one.memo?_id=${vo._id}">${vo.content}</a>
+	</td>
 	<td>${vo.weather}</td>
 	<td>${vo.date}</td>
 </tr>
