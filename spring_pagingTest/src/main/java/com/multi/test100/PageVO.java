@@ -3,6 +3,7 @@ package com.multi.test100;
 public class PageVO {
 	private int start;
 	private int end;
+	private int page;
 	
 	public int getStart() {
 		return start;
@@ -15,6 +16,19 @@ public class PageVO {
 	}
 	public void setEnd(int end) {
 		this.end = end;
+	}
+	
+	public int getPage() {
+		return page;
+	}
+	
+	public void setPage(int page) {
+		this.page = page;
+	}
+	
+	public void setStartEnd() { //page별 시작 끝목록 계산하는 함수
+		end = page * 10; 
+		start = 1 + (page - 1) * 10;
 	}
 	
 	@Override
