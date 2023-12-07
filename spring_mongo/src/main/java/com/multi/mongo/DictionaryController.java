@@ -16,6 +16,7 @@ public class DictionaryController {
 		//문장에 들어있는 명사만을 추출 -> dao에게 명사 넘기기 -> jumsu 몽고DB에서 검색 -> 가지고오기
 		//=> DB에 넣기 전처리, DB에서 검색한 후처리
 		//컨트롤러 -> 문장에 들어있는 명사만을 추출(service가 처리) -> dao
-		service.emotion(sentence);
+		String result = service.emotion(sentence);
+		model.addAttribute("result", result);
 	}
 }
