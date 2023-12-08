@@ -2,16 +2,17 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="bbs">
+<mapper namespace="car">
 <!-- 전체 페이지개수 계산할 때 전체 게시물 개수가 필요함 total / 페이지당개수 = pages  -->
 	<select id="count" resultType="int">
-		select count(*) from bbs b
+		select count(*) from car c
 	</select>
 
-	<select id="list" parameterType="PageVO" resultType="bbsVO">
+	<select id="list" parameterType="PageVO2" resultType="carVO">
 		select *
-		from
-			(select row_number() over(order by id desc) as bbs_no, b.id ,b.title, b.content, b.writer from bbs b) b2
-		where b2.bbs_no between ${start} and ${end}
+		from 
+ 			(select row_number() over(order by id) as row_no, c.*
+			from car c)c2 
+		where c2.row_no between ${start} and ${end}
 	</select>
 </mapper>
